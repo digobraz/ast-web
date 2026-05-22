@@ -9,8 +9,9 @@ const topStats = stats.slice(0, 3);
 ---
 
 <Layout>
-  <section class="relative bg-gradient-to-br from-brand-700 via-brand-500 to-brand-300 text-white overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.15),transparent_50%)]"></div>
+  <section class="relative text-white overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/img/hero/slide1.jpg');"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-900/85 via-brand-700/75 to-brand-500/60"></div>
     <div class="container-x relative py-20 md:py-32">
       <div class="max-w-3xl">
         <div class="text-sm uppercase tracking-widest text-brand-100 mb-4 font-semibold">{hero.eyebrow}</div>
@@ -81,8 +82,8 @@ const topStats = stats.slice(0, 3);
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {featured.map((c) => (
           <a href={`/zeriavy#${c.slug}`} class="group block bg-white rounded-xl overflow-hidden border border-slate-200 hover:shadow-lg transition-all">
-            <div class="aspect-video bg-gradient-to-br from-brand-100 to-brand-300 flex items-center justify-center text-5xl">
-              🏗️
+            <div class="aspect-video bg-slate-200 overflow-hidden">
+              <img src={c.image} alt={c.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
             </div>
             <div class="p-5">
               <div class="text-xs text-brand-500 font-semibold mb-1">{c.capacity} max nosnosť</div>

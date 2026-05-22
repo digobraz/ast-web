@@ -16,6 +16,7 @@ export const cranes: Crane[] = [
     capacityValue: 100,
     category: "autozeriav",
     description: "Vlajková loď nášho parku. Mobilný autožeriav s nosnosťou až 100 ton, ideálny pre veľké stavby a priemyselné montáže.",
+    image: "/img/cranes/grove-gmk-4100l.jpg",
   },
   {
     slug: "luna-at-60-42",
@@ -24,6 +25,7 @@ export const cranes: Crane[] = [
     capacityValue: 60,
     category: "autozeriav",
     description: "Univerzálny autožeriav s nosnosťou 60 ton a dosahom 42 m. Spoľahlivý všestranný pracant pre stredne náročné úlohy.",
+    image: "/img/cranes/luna-at-60-42.jpg",
   },
   {
     slug: "luna-gt-60-42",
@@ -32,6 +34,7 @@ export const cranes: Crane[] = [
     capacityValue: 60,
     category: "autozeriav",
     description: "Žeriav na podvozku DAF s nosnosťou 60 ton. Rýchla preprava medzi stavbami, výborná manévrovateľnosť.",
+    image: "/img/cranes/luna-gt-60-42.jpg",
   },
   {
     slug: "mercedes-actros-45-30",
@@ -40,6 +43,7 @@ export const cranes: Crane[] = [
     capacityValue: 45,
     category: "autozeriav",
     description: "Strednotonážny žeriav na podvozku Mercedes-Benz ACTROS. Optimálny pre montáže v mestskej zástavbe.",
+    image: "/img/cranes/mercedes-actros-45-30.jpg",
   },
   {
     slug: "luna-at-40-32",
@@ -48,6 +52,7 @@ export const cranes: Crane[] = [
     capacityValue: 40,
     category: "autozeriav",
     description: "Pružný 40-tonový žeriav pre stavebné a montážne práce. Vhodný pre prácu v obmedzenom priestore.",
+    image: "/img/cranes/luna-at-40-32.jpg",
   },
   {
     slug: "faun-rtf-40-3",
@@ -56,6 +61,7 @@ export const cranes: Crane[] = [
     capacityValue: 40,
     category: "autozeriav",
     description: "Terénny žeriav FAUN s nosnosťou 40 ton. Skvelý pre staveniská bez spevnenej cesty.",
+    image: "/img/cranes/faun-rtf-40-3.jpg",
   },
 ];
 

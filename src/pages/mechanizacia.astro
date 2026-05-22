@@ -7,28 +7,28 @@ const sections = [
     title: "Vysokozdvižné plošiny",
     eyebrow: "Plošiny s bohatým príslušenstvom",
     text: "Okrem autožeriavov poskytujeme prenájom vysokozdvižných a nožnicových plošín. K dispozícii máme tiež plošiny na žeriave. K jednotlivým plošinám a žeriavom poskytujeme bohaté príslušenstvo, vďaka ktorému sa vieme prispôsobiť takmer všetkým požiadavkám na práce — od montáže reklamy, po práce vo výškach na zatepľovaní budov či rekonštrukcii osvetlenia a elektroinštalácie.",
-    icon: "⬆️",
+    image: "/img/services/platforms.jpg",
   },
   {
     id: "podvalniky",
     title: "Ťahače s podvalníkmi",
     eyebrow: "Zabezpečenie nadrozmernej prepravy",
     text: "Pri preprave ťažkých stavebných strojov ako napríklad bagre, traktorbagre či plošiny, alebo pri prevoze či vykládke nadrozmerného nákladu vám padne vhod naša služba prenájmu podvalníkov. Prepravu nadrozmerného nákladu vieme zabezpečiť kompletne. Naložíme, prevezieme a vyložíme náklad bez nutnosti spolupráce s ďalšími firmami, čím šetríme váš čas aj peniaze.",
-    icon: "🚚",
+    image: "/img/services/podvalniky.jpg",
   },
   {
     id: "stroje",
     title: "Výkopové a búracie stroje",
     eyebrow: "Výkopy, búranie a odvoz odpadu",
     text: "V ponuke máme tiež mechanizmy UDS, CAT 263 C a traktorbager. Samozrejmosťou je kvalifikovaná obsluha. Zrealizujeme výkopy základov, kopanie prípojky, príjazdových ciest, výkopové práce pri stavbe IBV alebo prípravy terénov pod parkoviská. Stroje pre výkopové práce prenajímame pre firmy aj pre individuálnych zákazníkov. Poskytujeme službu búrania domov a budov s odvozom odpadu.",
-    icon: "⛏️",
+    image: "/img/services/excavator.jpg",
   },
   {
     id: "ruky",
     title: "Nákladné autá s hydraulickou rukou",
     eyebrow: "Preprava a manipulácia",
     text: "Nákladné autá s hydraulickou rukou poskytujú flexibilné riešenie pre prepravu materiálu spolu s jeho nakládkou a vykládkou. Ideálne pre stavebné materiály, palety, stavebné prvky.",
-    icon: "🚛",
+    image: "/img/hero/slide2.jpg",
   },
 ];
 ---
@@ -59,8 +59,8 @@ const sections = [
               <p class="text-slate-600 leading-relaxed mb-6">{s.text}</p>
               <a href="/dopyt" class="btn-secondary">Poslať dopyt →</a>
             </div>
-            <div class={`aspect-[4/3] rounded-2xl bg-gradient-to-br from-brand-100 to-brand-300 flex items-center justify-center text-8xl ${i % 2 === 1 ? "lg:order-1" : ""}`}>
-              {s.icon}
+            <div class={`aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+              <img src={s.image} alt={s.title} class="w-full h-full object-cover" loading="lazy" />
             </div>
           </article>
         ))}
