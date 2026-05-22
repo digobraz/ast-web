@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { cranes } from "../data/cranes";
+---
+
+<Layout
+  title="Prenájom autožeriavov — AST Crane Slovakia"
+  description="Park 28 autožeriavov s nosnosťou 40-100 ton. GROVE GMK 4100L, LUNA AT/GT, Mercedes ACTROS, FAUN RTF. Trenčín, Trnava, Bratislava."
+>
+  <section class="bg-gradient-to-br from-brand-700 to-brand-500 text-white py-20">
+    <div class="container-x">
+      <div class="eyebrow text-brand-100 mb-3">Prenájom</div>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Autožeriavy na prenájom</h1>
+      <p class="text-lg text-brand-50 max-w-2xl">
+        28 strojov v 4 parkoch. Nosnosti od 40 do 100 ton, kvalifikovaná obsluha,
+        nasadenie do 24 hodín.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-x">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {cranes.map((c) => (
+          <article id={c.slug} class="bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-lg transition-all">
+            <div class="aspect-[4/3] bg-gradient-to-br from-brand-100 to-brand-300 flex items-center justify-center text-6xl">
+              🏗️
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2 py-1 text-xs font-bold bg-brand-500 text-white rounded">
+                  {c.capacity}
+                </span>
+                <span class="text-xs text-slate-500 uppercase tracking-wide">Autožeriav</span>
+              </div>
+              <h2 class="font-extrabold text-xl mb-3">{c.name}</h2>
+              <p class="text-sm text-slate-600 leading-relaxed mb-4">{c.description}</p>
+              <a href="/dopyt" class="text-sm font-semibold text-brand-500 hover:underline">
+                Poslať dopyt →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="mt-16 bg-slate-50 rounded-xl p-8 text-center">
+        <h3 class="text-2xl font-extrabold mb-3">Neviete sa rozhodnúť?</h3>
+        <p class="text-slate-600 mb-6 max-w-xl mx-auto">
+          Náš dispečer vám zadarmo poradí, ktorý stroj je optimálny pre vašu prácu.
+        </p>
+        <a href="/dopyt" class="btn-primary">Poslať dopyt</a>
+      </div>
+    </div>
+  </section>
+</Layout>

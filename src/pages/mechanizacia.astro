@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const sections = [
+  {
+    id: "plosiny",
+    title: "Vysokozdvižné plošiny",
+    eyebrow: "Plošiny s bohatým príslušenstvom",
+    text: "Okrem autožeriavov poskytujeme prenájom vysokozdvižných a nožnicových plošín. K dispozícii máme tiež plošiny na žeriave. K jednotlivým plošinám a žeriavom poskytujeme bohaté príslušenstvo, vďaka ktorému sa vieme prispôsobiť takmer všetkým požiadavkám na práce — od montáže reklamy, po práce vo výškach na zatepľovaní budov či rekonštrukcii osvetlenia a elektroinštalácie.",
+    icon: "⬆️",
+  },
+  {
+    id: "podvalniky",
+    title: "Ťahače s podvalníkmi",
+    eyebrow: "Zabezpečenie nadrozmernej prepravy",
+    text: "Pri preprave ťažkých stavebných strojov ako napríklad bagre, traktorbagre či plošiny, alebo pri prevoze či vykládke nadrozmerného nákladu vám padne vhod naša služba prenájmu podvalníkov. Prepravu nadrozmerného nákladu vieme zabezpečiť kompletne. Naložíme, prevezieme a vyložíme náklad bez nutnosti spolupráce s ďalšími firmami, čím šetríme váš čas aj peniaze.",
+    icon: "🚚",
+  },
+  {
+    id: "stroje",
+    title: "Výkopové a búracie stroje",
+    eyebrow: "Výkopy, búranie a odvoz odpadu",
+    text: "V ponuke máme tiež mechanizmy UDS, CAT 263 C a traktorbager. Samozrejmosťou je kvalifikovaná obsluha. Zrealizujeme výkopy základov, kopanie prípojky, príjazdových ciest, výkopové práce pri stavbe IBV alebo prípravy terénov pod parkoviská. Stroje pre výkopové práce prenajímame pre firmy aj pre individuálnych zákazníkov. Poskytujeme službu búrania domov a budov s odvozom odpadu.",
+    icon: "⛏️",
+  },
+  {
+    id: "ruky",
+    title: "Nákladné autá s hydraulickou rukou",
+    eyebrow: "Preprava a manipulácia",
+    text: "Nákladné autá s hydraulickou rukou poskytujú flexibilné riešenie pre prepravu materiálu spolu s jeho nakládkou a vykládkou. Ideálne pre stavebné materiály, palety, stavebné prvky.",
+    icon: "🚛",
+  },
+];
+---
+
+<Layout
+  title="Prenájom mechanizácie — AST Crane Slovakia"
+  description="Vysokozdvižné plošiny, ťahače s podvalníkmi, výkopové a búracie stroje, nákladné autá s hydraulickou rukou."
+>
+  <section class="bg-gradient-to-br from-brand-700 to-brand-500 text-white py-20">
+    <div class="container-x">
+      <div class="eyebrow text-brand-100 mb-3">Prenájom</div>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Prenájom mechanizácie</h1>
+      <p class="text-lg text-brand-50 max-w-2xl">
+        Plošiny, ťahače, búracie stroje a nákladné autá s hydraulickou rukou.
+        Všetko s kvalifikovanou obsluhou, kdekoľvek na Slovensku.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-x">
+      <div class="space-y-20">
+        {sections.map((s, i) => (
+          <article id={s.id} class={`grid lg:grid-cols-2 gap-10 items-center ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
+            <div class={i % 2 === 1 ? "lg:order-2" : ""}>
+              <div class="eyebrow mb-2">{s.eyebrow}</div>
+              <h2 class="text-3xl md:text-4xl font-extrabold mb-4">{s.title}</h2>
+              <p class="text-slate-600 leading-relaxed mb-6">{s.text}</p>
+              <a href="/dopyt" class="btn-secondary">Poslať dopyt →</a>
+            </div>
+            <div class={`aspect-[4/3] rounded-2xl bg-gradient-to-br from-brand-100 to-brand-300 flex items-center justify-center text-8xl ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+              {s.icon}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

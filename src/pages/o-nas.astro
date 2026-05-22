@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { about } from "../data/content";
+import { stats } from "../data/cranes";
+---
+
+<Layout
+  title="O nás — AST Crane Slovakia"
+  description="Slovenská firma so 4 vlastnými žeriavovými parkmi, 16 žeriavnikmi a 28 strojmi."
+>
+  <section class="bg-gradient-to-br from-brand-700 to-brand-500 text-white py-20">
+    <div class="container-x">
+      <div class="eyebrow text-brand-100 mb-3">O spoločnosti</div>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">{about.title}</h1>
+      <p class="text-lg text-brand-50 max-w-2xl">{about.intro}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-x">
+      <div class="grid md:grid-cols-2 gap-6">
+        {about.values.map((v) => (
+          <div class="bg-white rounded-xl border border-slate-200 p-8">
+            <h3 class="font-extrabold text-xl text-brand-500 mb-3">{v.title}</h3>
+            <p class="text-slate-600 leading-relaxed">{v.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-slate-50">
+    <div class="container-x">
+      <div class="text-center mb-12">
+        <div class="eyebrow mb-2">V číslach</div>
+        <h2 class="text-3xl md:text-4xl font-extrabold">Naša kapacita</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+        {stats.map((s) => (
+          <div class="bg-white rounded-xl p-6 border border-slate-200 text-center">
+            <div class="text-4xl font-extrabold text-brand-500 mb-2">{s.value}</div>
+            <div class="font-bold mb-1">{s.label}</div>
+            <p class="text-xs text-slate-500">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

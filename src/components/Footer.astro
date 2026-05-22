@@ -1,0 +1,56 @@
+---
+import { parks, company } from "../data/contacts";
+---
+
+<footer class="bg-brand-900 text-slate-200 mt-24">
+  <div class="container-x py-16 grid lg:grid-cols-4 gap-10">
+    <div class="lg:col-span-1">
+      <div class="text-3xl font-extrabold text-white mb-2">AST</div>
+      <div class="text-sm text-brand-300 mb-4">Crane Slovakia, s. r. o.</div>
+      <p class="text-sm text-slate-400 leading-relaxed">
+        Autožeriavy na prenájom<br/>
+        Vysokozdvižné plošiny<br/>
+        Ťahače s podvalníkmi<br/>
+        Búracie a stavebné stroje
+      </p>
+      <a
+        href={company.facebook}
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 mt-4 text-sm text-brand-300 hover:text-white"
+      >
+        <span>→</span> Facebook
+      </a>
+    </div>
+
+    {parks.map((park) => (
+      <div class="text-sm">
+        <h4 class="text-white font-bold mb-2 text-base">{park.city}</h4>
+        <div class="text-xs text-slate-400 mb-3">{park.location !== park.city ? park.location : ""}</div>
+        <div class="space-y-1">
+          {park.people.map((p) => (
+            <div>
+              <div class="text-slate-300">{p.name}</div>
+              <a href={`tel:${p.phoneClean}`} class="text-brand-300 hover:text-white">
+                {p.phone}
+              </a>
+            </div>
+          ))}
+          <a href={`mailto:${park.email}`} class="block mt-2 text-brand-300 hover:text-white text-xs">
+            {park.email}
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div class="border-t border-brand-700">
+    <div class="container-x py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+      <div>© {new Date().getFullYear()} {company.name}. Všetky práva vyhradené.</div>
+      <div class="flex items-center gap-4">
+        <a href="/kontakt" class="hover:text-white">Kontakt</a>
+        <a href="/dopyt" class="hover:text-white">Dopyt</a>
+      </div>
+    </div>
+  </div>
+</footer>
